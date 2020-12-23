@@ -28,7 +28,7 @@ googleAnalytics = "Your Google Analytics tracking id"
   bio = ""
 
   # Short subtitle/tagline. This is displayed in the header.
-  subtitle = "Data Science graduate student @ USC. Check out my projects here."
+  subtitle = "Data Science graduate student @ USC."
 
   # Logo image. This is displayed ogp image.
   logo = "/path/to/logo"
@@ -53,6 +53,17 @@ googleAnalytics = "Your Google Analytics tracking id"
     name = "Tags"
     url = "/tags"
     weight = 4
+
+[[menu.main]]
+    name = "Github"
+    url = "/tags"
+    weight = 5
+
+[[menu.main]]
+    name = "Contact"
+    url = "/tags"
+    weight = 6
+
 
 [related]
   # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
