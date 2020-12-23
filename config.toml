@@ -1,4 +1,4 @@
-baseUrl                = "/"
+baseurl                = "/"
 theme                  = "hugo-theme-pixyll"
 
 archetypeDir           = "archetypes"
