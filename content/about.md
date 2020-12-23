@@ -4,6 +4,7 @@ date = "2020-12-22"
 hideDate = true
 +++
 
+![](../static/images/profile.JPG)
 
 Aspiring data scientist. Writer. Musician. Runner. Animal Lover. 
 
