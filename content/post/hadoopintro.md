@@ -23,7 +23,9 @@ Hadoop is a framework for processing big data. Hadoop has several major componen
 
 Hadoop is needed to address the ever-growing prevalence of big data.
 
-
+```
+Example commands
+```
 
 
 ## Example

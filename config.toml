@@ -1,6 +1,8 @@
+baseUrl                = "/"
+theme                  = "hugo-theme-pixyll"
+
 archetypeDir           = "archetypes"
 author                 = "admin"
-baseUrl                = "/"
 buildDrafts            = false
 relativeURLs           = true
 canonifyUrls           = true
@@ -8,7 +10,6 @@ contentDir             = "content"
 languageCode           = "en-us"
 layoutDir              = "layouts"
 publishDir             = "public"
-theme                  = "hugo-theme-pixyll"
 title                  = "Erica Xia"
 enableEmoji            = true
 DefaultContentLanguage = "en"
