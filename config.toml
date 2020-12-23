@@ -1,3 +1,4 @@
+theme = "hugo_theme_pickles"
 baseurl = "/"
 languageCode = "en-us"
 Title = "Erica Xia"
