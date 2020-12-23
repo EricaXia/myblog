@@ -24,7 +24,7 @@ googleAnalytics = "Your Google Analytics tracking id"
   author = "Erica Xia"
   authorwebsite = "example.com"
   avatar = "/path/to/avatar"
-  contact = "Your contact link (ex. mailto:foo@example.com)"
+  contact = "mailto:ericaxia@usc.edu"
   bio = ""
 
   # Short subtitle/tagline. This is displayed in the header.
