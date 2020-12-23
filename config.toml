@@ -3,7 +3,7 @@ baseurl = "/"
 languageCode = "en-us"
 Title = "Erica Xia"
 # Copyright notice. This is displayer in the footer.
-copyright = "&copy; Copyright notice"
+copyright = "&copy; Copyright 2020"
 
 # Google Analytics API key.
 googleAnalytics = "Your Google Analytics tracking id"
@@ -11,34 +11,25 @@ googleAnalytics = "Your Google Analytics tracking id"
 [params]
   paginate = 10
   custom_css = ["/css/custom.css"]
+
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
   twitter = "Your Twitter username"
-  facebook = "Your Facebook username"
-  instagram = "Your Instagram username"
-  github = "Your GitHub username"
-  gitlab = "Your GitLab username"
-  npm = "Your npm username"
-  codepen = "Your CodePen username"
-  dribbble = "Your Dribbble username"
-  fivehundredpx = "Your 500px username" # 500px
-  flickr = "Your Flickr username"
-  pinterest = "Your Pinterest username"
-  tumblr = "Your Tumblr username"
-  vimeo = "Your Vimeo username"
+  github = "EricaXia"
   youtube = "Your YouTube username"
-  linkedin = "Your LinkedIn username"
+  linkedin = "erica-xia-9370aa9a"
   medium = "Your Medium username"
-  strava = "Your Strava userid"
   # Disqus shortname
   disqus = ""
-  author = "Your Name"
+  author = "Erica Xia"
   authorwebsite = "example.com"
   avatar = "/path/to/avatar"
   contact = "Your contact link (ex. mailto:foo@example.com)"
-  bio = "Your short bio"
+  bio = ""
+
   # Short subtitle/tagline. This is displayed in the header.
-  subtitle = "Short subtitle"
+  subtitle = "Data Science graduate student @ USC. Check out my projects here."
+
   # Logo image. This is displayed ogp image.
   logo = "/path/to/logo"
   favicon = "/path/to/favicon"
@@ -54,21 +45,9 @@ googleAnalytics = "Your Google Analytics tracking id"
     weight = 2
 
 [[menu.main]]
-    identifier = "theme"
-    name = "/theme"
+    name = "Projects"
+    url = "/projects"
     weight = 3
-
-[[menu.main]]
-    parent = "theme"
-    name = "creating-a-new-theme"
-    url = "/posts/creating-a-new-theme"
-    weight = 1
-
-[[menu.main]]
-    parent = "theme"
-    name = "migrate-from-jekyll"
-    url = "/posts/migrate-from-jekyll"
-    weight = 2
 
 [[menu.main]]
     name = "Tags"

@@ -1,16 +1,14 @@
 +++
-title = "About Hugo"
-date = "2014-04-09"
+title = "About Me"
+date = "2020-12-22"
+hideDate = true
 +++
 
-Hugo is a static site engine written in Go.
+Aspiring data scientist. Writer. Musician. Runner. Animal Lover. 
 
+Check out more of my work here:
+* [Creative Writing](https://github.com/spf13/cobra)
+* [My Youtube Channel](https://github.com/spf13/viper)
+* [Organization 1](https://github.com/spf13/jWalterWeatherman)
+* [Organization 2](https://github.com/spf13/cast)
 
-It makes use of a variety of open source projects including:
-
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
