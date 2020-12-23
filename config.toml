@@ -1,4 +1,4 @@
-baseurl                = "/"
+baseurl                = "https://ericaxia.github.io/"
 theme                  = "hugo-theme-pixyll"
 
 archetypeDir           = "archetypes"
