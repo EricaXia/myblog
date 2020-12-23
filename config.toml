@@ -1,5 +1,5 @@
 theme = "hugo_theme_pickles"
-baseurl = "/"
+baseurl = "ericaxia.github.io"
 languageCode = "en-us"
 Title = "Erica Xia"
 # Copyright notice. This is displayer in the footer.
