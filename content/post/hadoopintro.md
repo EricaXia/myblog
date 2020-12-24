@@ -24,7 +24,8 @@ Hadoop is a open-source software framework for the distributed processing of big
 Hadoop is needed to address the ever-growing prevalence of big data.
 
 ```
-Example commands
+Example of running Hadoop commands
+
 ```
 
 
