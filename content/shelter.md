@@ -3,8 +3,8 @@ title = "Flask Web App: Prediction of Animal Shelter Outcomes"
 tags = ['Logistic Regression', 'Flask', 'Web Application']
 date = "2019-12-06"
 +++
-### EDA and Logistic Regression Modeling Project
-## [**View the app here**](https://animal-shelter-prediction.herokuapp.com)
+### Exploratory Data Analysis and Logistic Regression Modeling Project
+<!-- ## [**View the app here**](https://animal-shelter-prediction.herokuapp.com) -->
 
 ---
 

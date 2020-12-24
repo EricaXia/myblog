@@ -5,18 +5,18 @@ tags = ['Hadoop', 'HDFS', 'MapReduce']
 date = "2020-12-22"
 +++
 
+![](/../images/hadoop-logo.png)
+
 What is Apache Hadoop, and why is it needed? Let's investigate.
 
 
 ## What is Hadoop?
 
-Hadoop is a framework for processing big data. Hadoop has several major components.
+Hadoop is a open-source software framework for the distributed processing of big data. Hadoop has several major components:
 
 1. Hadoop Distributed File System (HDFS)
 2. YARN
 3. MapReduce (programming model)
-
-
 
 
 ## Why Hadoop?

@@ -4,7 +4,7 @@ tags = ['NLP', 'Social Media', 'Web Scraping', 'Data Analysis', 'Spatial Analysi
 date = "2020-03-28"
 +++
 
-![](https://github.com/EricaXia/academic-kickstart/blob/master/content/project/ckids/featured.jpg?raw=true)
+![](https://github.com/EricaXia/academic-kickstart/blob/master/content/project/ckids/featured.jpg?raw=true#center)
 
 ### Instgram Web Scraping and Data Analysis Project
 #### Center for Knowledge-Powered Interdisciplinary Data Science (CKIDS) at USC
