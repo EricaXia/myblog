@@ -1,9 +1,6 @@
-baseurl                = "https://ericaxia.github.io/"
-# #theme                  = "hugo-theme-pixyll"
-theme = "mytheme"
-
 archetypeDir           = "archetypes"
 author                 = "admin"
+baseUrl                = "http://localhost:1313"
 buildDrafts            = false
 relativeURLs           = true
 canonifyUrls           = true
@@ -11,15 +8,19 @@ contentDir             = "content"
 languageCode           = "en-us"
 layoutDir              = "layouts"
 publishDir             = "public"
-title                  = "Erica Xia"
+theme                  = "hugo-theme-pixyll"
+themesDir              = "../.."
+title                  = "Pixyll"
 enableEmoji            = true
 DefaultContentLanguage = "en"
 #disqusShortname        = ""
 
-
 [Languages]
 [Languages.en]
 weight = 1
+
+[Languages.ru]
+weight = 2
 
 [blackfriday]
 angledQuotes = true
@@ -31,7 +32,7 @@ hrefTargetBlank = true
 
 [params]
   mainSections = ["post"]
-  search_engine = false
+  search_engine = true
   #google_analytics_id = ""
   twitter_username = "username"
   paginate = 5
