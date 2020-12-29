@@ -5,9 +5,11 @@ hideDate = true
 +++
 
 <!-- TODO: fix image centering -->
-![](/images/profile1.jpg)
-
 Aspiring data scientist. Writer. Musician. Runner. Animal Lover. 
+
+
+![](/images/profile_pic_20201229.jpeg)
+
 
 Check out some of my creative work here:
 * [My Youtube Channel](https://www.youtube.com/channel/UC4TH7cZ8zP1-oK4_URPslNA)
