@@ -3,6 +3,7 @@ title = "Intro to Hadoop & HDFS (Part One)"
 description = "What is Hadoop and what is it used for? Why is it needed? Let's investigate."
 tags = ['Hadoop', 'HDFS', 'MapReduce']
 date = "2020-12-22"
+draft = false
 +++
 
 ![](/../images/hadoop-logo.png)
