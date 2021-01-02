@@ -21,17 +21,12 @@ Hadoop is a open-source software framework for the storage and distributed proce
 
 ## Why Hadoop?
 
-<Insert more about benefits of Hadoop, why Hadoop, what Hadoop does better versus other frameworks>
-
-
 Why do we need Hadoop? The ever-growing prevalence of large-scale data requires a distributed model of processing and storage for efficiency. Hadoop arose to address these concerns.
 
 Compared to NFS (Network File System), HDFS is defined to withstand failures, which is known as fault tolerance. This is because it stores multiple replicas (copies) of files, whereas a NFS does not have any built-in fault tolerance.
 
 
 ### 1. HDFS: Hadoop Distributed File System
-
-<Basics: HDFS is the file system for Hadoop. It's the system used to store files.>
 
 HDFS runs on a network of clusters, which in turn contain many nodes. A **node** is a process running on a virtual or physical machine. A **cluster** is a collection of nodes that are networked together to store data and perform parallel processing. A physical collection of nodes, approximately thirty to forty nodes, is called a **rack**. One Hadoop cluster may contain many racks. A network of clusters comprises HDFS.
 
@@ -42,7 +37,6 @@ A **NameNode** is the main node in HDFS. It's a highly-available server that's r
 **DataNodes** are the worker nodes of HDFS. These block servers store the actual data, often run on inexpensive commodity hardware. They perform low level read and write requests from clients. DataNodes send regular “heartbeat" reports to provide regular status updates to the NameNode, indicating the DataNode is ready to receive commands for block replicating or deleting.
 
 One main function of the the NameNode is to map the data blocks to the DataNodes, via the information contained in the metadata. This lets client applications know which data blocks are needed to process, and where they're located. The NameNode is also responsible for all file system operations including opening and closing files or directories. The NameNode sends instructions to the DataNodes to execute instructions such as creating, deleting, or replicating data blocks. Clients interact with the DataNodes directly in order to modify the blocks. 
-
 
 Since the NameNode is so crucial to the functioning of the HDFS, it has the risk of being a **single point of failure (SPOF)**. In early versions of Hadoop, if the NameNode went down, the entire cluster it managed would also go down. All access to HDFS would be shut off. Clients wouldn't be able to read, write, or list any files. Thus, there was a need to configure the system to back up the NameNode’s metadata in case of failure. 
 
@@ -60,14 +54,10 @@ The process of MapReduce can be summarized in the following steps:
 5. Reduce Phase: Aggregates the elements. 
 6. Outputs result.
 
-< Insert a MR image>
-
 
 ### 3. YARN
 
-< Brief info about YARN >
-
-
+To be continued.
 
 
 
