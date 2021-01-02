@@ -60,7 +60,6 @@ The process of MapReduce can be summarized in the following steps:
 To be continued.
 
 
-
 In the next post of this series, we'll look at concrete examples of how to get started running and using Hadoop.
 
 
