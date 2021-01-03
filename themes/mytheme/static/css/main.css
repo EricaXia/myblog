@@ -27,7 +27,9 @@ img {
   /*Try to center images by default*/
   text-align: center;
   display: block;
-  margin: 0.7rem auto;
+  margin: 1.0rem auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .site-wrap {
