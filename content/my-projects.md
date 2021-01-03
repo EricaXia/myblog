@@ -10,12 +10,16 @@ List of Completed and Ongoing Projects
 -->
 * [Social Network Analysis of GitHub Users](https://github.com/github-cve-social-graph/network_graphs)
     * Detection of potential threat actors by analyzing users who interact with proof-of-concept CVE repositories on GitHub.
-* [Stock Prices App with Flask, MongoDB, and MySQL on GCP](/stocks)
-    * Flask web application that displays real-time Yahoo Finance stock data stored on Google Cloud Platform (MySQL) and news article metadata stored in MongoDB Atlas.
+    * *Team project in collaboration with the Center for Knowledge-Powered Interdisciplinary Data Science at USC*
+* [Stock Prices App with Flask, MongoDB, MySQL on GCP, and Spark](/stocks)
+    * Web application displying Yahoo Finance stock data stored on Google Cloud Platform (MySQL) and news article data stored in MongoDB Atlas. Prices aggregated using Spark.
 * [Instagram Scraping](/instagram)
     * Scrape and store posts from Instagram for nutritional health study
+    * *Team project in collaboration with the Center for Knowledge-Powered Interdisciplinary Data Science at USC*
+
 * [Snorkel](/snorkel)
     * Utilize Snorkel Machine Learning framework to detect virus-host relation mentions in academic literature
+    * *Research project in collaboration with the Epicenter for Disease Dynamics at UC Davis*
 * [Spotify App](/songs-app)
     * Interactive dashboard that visualizes music data scraped from Spotify and the Billboard 100
 * [Shelter](/shelter)
