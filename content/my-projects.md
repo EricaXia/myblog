@@ -5,12 +5,13 @@ date = "2020-12-23"
 +++
 
 List of Completed and Ongoing Projects
-* [Open Source Development](https://github.com/) (**Ongoing**)
+<!-- * [Open Source Development](https://github.com/) (**Ongoing**)
     * Involvement in Open Source projects
+-->
 * [Social Network Analysis of GitHub Users](https://github.com/github-cve-social-graph/network_graphs)
     * Detection of potential threat actors by analyzing users who interact with proof-of-concept CVE repositories on GitHub.
-* [Stock Market Web App](/stocks)
-    * Flask web application that displays real-time Yahoo Finance stock data and news articles
+* [Stock Prices App with Flask, MongoDB, and MySQL on GCP](/stocks)
+    * Flask web application that displays real-time Yahoo Finance stock data stored on Google Cloud Platform (MySQL) and news article metadata stored in MongoDB Atlas.
 * [Instagram Scraping](/instagram)
     * Scrape and store posts from Instagram for nutritional health study
 * [Snorkel](/snorkel)
