@@ -24,6 +24,10 @@ html, body {
 img {
   width: auto;
   max-width: 100%;
+  /*Try to center images by default*/
+  text-align: center;
+  display: block;
+  margin: 0.7rem auto;
 }
 
 .site-wrap {
