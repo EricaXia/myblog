@@ -4,7 +4,7 @@ tags = ['NLP', 'Social Media', 'Web Scraping', 'Data Analysis', 'Spatial Analysi
 date = "2020-03-28"
 +++
 
-![](https://github.com/EricaXia/academic-kickstart/blob/master/content/project/ckids/featured.jpg?raw=true#center)
+![](/images/ig.jpg#center)
 
 ### Instgram Web Scraping and Data Analysis Project
 #### Center for Knowledge-Powered Interdisciplinary Data Science (CKIDS) at USC
@@ -39,7 +39,7 @@ Social media provides an abundance of data for diet and nutritional behaviors. W
 
 <br />
 
-![](https://github.com/EricaXia/academic-kickstart/raw/master/content/project/ckids/food-photo.jpg)
+![](/images/ig_food-photo.jpg#center)
 
 Official public health estimates population-level nutritional quality and patterns come from self-report survey data based on small samples and provide coarse surveillance measures; the best available data source in Los Angeles employs a sample population on the order of 5,000 LA residents to provide a limited set of diet/nutrition variables such as frequency of fruit and vegetable consumption and fast food consumption. Social media data suffers from multiple important biases including self-presentation and self-selection, but provides information that survey data cannot: it is at a large population scale, can provide sentiment information, and demonstrate social components including likes, follows, and behavior clustering. Using an Instagram dataset of all geo-located posts at food outlets in Los Angeles for 3 months in 2014, this project will investigate whether Instagram posts, despite implicit biases (and to the extent possible, accounting for these biases), can provide a representative health signal, informative of the quality of population nutrition and dietary patterns at a highly-resolved (e.g. census tract level) spatial scale. 
 
