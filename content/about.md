@@ -11,11 +11,6 @@ Aspiring data scientist. Writer. Musician. Runner. Animal Lover.
 
 Connect with me on [LinkedIn](https://www.linkedin.com/in/erica-xia-9370aa9a/).
 
-
-<br />
-<br />
-<br />
-
 Check out my creative work [here](https://linktr.ee/ex9966).
 
 <!-- Check out my creative work here:

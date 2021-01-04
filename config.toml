@@ -1,5 +1,4 @@
 baseurl                = "https://ericaxia.github.io/"
-# #theme                  = "hugo-theme-pixyll"
 theme = "mytheme"
 
 archetypeDir           = "archetypes"
@@ -24,6 +23,15 @@ weight = 1
 [blackfriday]
 angledQuotes = true
 hrefTargetBlank = true
+nofollowLinks = true
+noreferrerLinks = true
+plainIDAnchors = true
+extensions = [
+	"hardLineBreak", # newlines result in line breaks
+]
+
+[markup.goldmark.renderer]
+hardWraps = true
 
 [indexes]
   category = "categories"
