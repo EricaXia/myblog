@@ -1,6 +1,6 @@
 +++
 title = "Projects"
-tags = ['Machine Learning', 'Network Analysis', 'NLP']
+tags = []
 date = "2020-12-23"
 +++
 
@@ -8,7 +8,7 @@ List of Completed and Ongoing Projects
 <!-- * [Open Source Development](https://github.com/) (**Ongoing**)
     * Involvement in Open Source projects
 -->
-* [Social Network Analysis of GitHub Users](https://github.com/github-cve-social-graph/network_graphs)
+* [Social Network Analysis of Potential Threat Actors On GitHub](/social-graph)
     * Detection of potential threat actors by analyzing users who interact with proof-of-concept CVE repositories on GitHub.
     * *Team project in collaboration with the Center for Knowledge-Powered Interdisciplinary Data Science at USC*
 * [Stock Prices App with Flask, MongoDB, MySQL on GCP, and Spark](/stocks)
