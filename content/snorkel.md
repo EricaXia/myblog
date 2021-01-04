@@ -5,7 +5,7 @@ date = "2019-11-06"
 +++
 
 ![](https://github.com/EricaXia/snorkel/raw/master/images/logo.png)
-### Virus Host Species Extraction from Research Text
+### Relation Extraction of Virus-Host Species from Epidemiological Research Literature (NLP Project)
 #### University of California, Davis - Epicenter for Disease Dynamics
 
 <br />

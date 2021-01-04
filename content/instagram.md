@@ -6,13 +6,10 @@ date = "2020-03-28"
 
 ![](/images/ig.jpg#center)
 
-### Instgram Web Scraping and Data Analysis Project
-#### Center for Knowledge-Powered Interdisciplinary Data Science (CKIDS) at USC
+*Team project in collaboration with the **Center for Knowledge-Powered Interdisciplinary Data Science (CKIDS) at USC.***	
 
 Project Advisors:  
-<br />
 Professor Andrés Abeliuk, Information Sciences Institute, USC  
-<br />
 Dr. Abigail Horn, Postdoctoral Fellow, Preventive Medicine, USC
 
 
@@ -66,7 +63,6 @@ We start scraping Instagram by specific hashtags (#burger, #foodie, #kale, and m
   - Usernames + comments for top 50 commenters
   - Usernames for top 50 likes
 
-<br />
 
 ## 3. Data Visualization
 
@@ -80,6 +76,13 @@ We start scraping Instagram by specific hashtags (#burger, #foodie, #kale, and m
 ### 3.2 Spatial Analysis
 We pulled data from all other the globe to analyze differences in post content. Here is a simple graphic created using the Python GeoPandas package.
 ![](https://github.com/EricaXia/academic-kickstart/raw/master/content/project/ckids/worldmap.png)
+
+
+
+<!-- TODO: -->
+\* *Page under construction* *
+
+
 
 
 [View the code on GitHub here.](https://github.com/EricaXia/ckids-project-usc)

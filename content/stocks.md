@@ -26,7 +26,11 @@ The application is built using the Python framework Flask, along with the additi
 5. Test and deploy.
 
 
-### 1. Using APIs to Fetch Data
+<!-- TODO: -->
+\* *Page under construction* *
+
+
+<!-- ### 1. Using APIs to Fetch Data
 
 First, the Yahoo Finance data is fetched using the Yahoo Finance API.
 Next, the Google News data is fetched using the Google News API.
@@ -34,10 +38,9 @@ Next, the Google News data is fetched using the Google News API.
 ### 2. Data Storage on GCP 
 
 
-
 ### 3. Data Storage on MongoDB Atlas.
 
-<!-- Check out my blog post on MongoDB NoSQL databases here.  -->
+ Check out my blog post on MongoDB NoSQL databases here.  
 
 
 ### 4. Building the Flask Application
@@ -46,3 +49,4 @@ Next, the Google News data is fetched using the Google News API.
 
 ### 5. Testing and Deployment
 
+-->
