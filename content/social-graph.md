@@ -14,9 +14,11 @@ Project Advisor: Jeremy Abramson, PhD (Viterbi School of Engineering, ISI)
 
 ![]()
 
-This project focuses on the early detection of potential threat actors on GitHub. We accomplish this by discovering the users who interact with proof-of-concept (PoC) CVE repositories and analyze their relationships using [social network analysis](https://en.wikipedia.org/wiki/Social_network_analysis). Detecting potentially malicious users who interact with software exploits via analysis of **open-source intelligence (OSINT)** is the first step towards the process of threat attribution. 
+Cyber threat attribution is becoming an increasingly critical and challenging problem. One possible way to mitigate these threats is the early identification of potentially malicious users (threat actors). Detecting potentially malicious users who interact with software exploits via analysis of **open-source intelligence (OSINT)** is the first step towards threat attribution. 
 
-The generated social graphs are analyzed to determine if "black hat" threat actors have distinct networks apart from "white hat" users. Successful detection could help accelerate the discovery of threat actors, in addition to aiding in linking their personas on different platforms.  
+This project focuses on the detection of potential threat actors on [GitHub](https://github.com/). We accomplish this by discovering users who interact with proof-of-concept (PoC) CVE repositories and analyze their relationships using **[social network analysis](https://en.wikipedia.org/wiki/Social_network_analysis)**. 
+
+We analyze the generated social graphs to determine if "black hat" threat actors have distinct networks apart from "white hat" users. Successful detection could help accelerate the discovery of threat actors, in addition to aiding in linking their personas on different platforms.  
 
 The software repositories investigated are gathered from the [Common Vulnerabilities and Exposures (CVE) records](https://cve.mitre.org/index.html) maintained by MITRE. 
 
@@ -47,22 +49,19 @@ In an ever-expanding digital world with exponentially increasing amounts of gene
 
 **GitHub** is a free code hosting platform, popular with developers across the world. However, threat actors may also use this service to access **Proof-of-Concept (PoC)** vulnerabilities and exploits (CVEs). Thus, we want to identify 'persons of interest' on GitHub by first identifying malicious software these users may be interested in. Then the users who interact with this software can be gathered, and their relationships analyzed with **social network graphs**.
 
+[Graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) are mathematical representations of interactions and relationships between entities, as described by a network of nodes and edges. Edges are pair-wise connections between adjacent nodes. [Graph theory](https://en.wikipedia.org/wiki/Graph_theory), a major branch of mathematics, has diverse applications. In areas as varied as biology, physics, and economics, graphs are universally used to represent complex systems. 
 
-<!-- <brief intro about social graphs>
-Graphs are mathematical abstractions of complex systems of relations and interactions. A graph represents a network of objects (called nodes or vertices) with pairwise connections (edges). Graphs are ubiquitously used in fields as diverse as biology⁵ ⁶ ⁷, quantum chemistry⁸, and high-energy physics⁹. Social networks like Twitter are examples of very large-scale complex graphs where the nodes model users and Tweets, while the edges model interactions such as replies, Retweets, or favs. Public conversations happening on our platform typically generate hundreds of millions of Tweets and Retweets every day. This makes Twitter perhaps one of the largest producers of graph-structured data in the world, second perhaps only to the Large Hadron Collider.   -->
+In particular, social network graphs are a compelling way to model interactions between users. For example, graphs can be built from Facebook data that visualize how friends are connected. Twitter social graphs can model retweets or likes between users. 
 
 ![]()
 
 ### Motivation and Problem Statement
 
-Our goal is to implement detection of potential threat actors by analyzing users who interact with proof-of-concept CVE implementations. This, in turn, lays the groundwork for threat attribution and entity resolution.
+Our goal is to detect potential threat actors by analyzing users who interact with proof-of-concept CVE implementations, laying the groundwork for future threat attribution and entity resolution. We plan to do this by building and analyzing social network graphs of user interactions.
 
-We plan to do this by building and analyzing social network graphs of user interactions. For example, social graphs can be built from Facebook data that visualize how friends are connected. Twitter social graphs can model retweets or likes between users. 
+For our project, we first investigate ways to best represent our users in a data structure that can represent connections across multiple dimensions. Additionally, we must consider which aspect of user interactions (forking, starring, or cloning a repository) is most meaningful to represent.
 
-For our project, we first begin by asking: How can we represent our users in a data structure that can represent connections across multiple dimensions? And which aspect of user interactions (forking, starring, or cloning a repository) is most interesting to represent?
-
-**Problem Statement:**
-
+Our Initial Questions:
 * Which CVEs have PoC GitHub repositories?
 * Given this list of repositories, what users interacted with them?
 * How did these users interact with the repositories? How many did they interact with in common?
@@ -101,7 +100,9 @@ To build the graphs, we utilized the Python package [networkx](https://networkx.
 
 First, the CSV files of all users' data are imported into Jupyter notebooks and converted to a [Pandas](https://pandas.pydata.org/) dataframe in Python. The dataframe columns consist of the *username* and the *repository name*. The data is cleaned and transformed. We use the [itertools.combinations](https://docs.python.org/3/library/itertools.html#itertools.combinations) function to generate all possible combinations of user pairs and append these to a new dataframe. The result is an edge list of users, which is a computer-readable way to represent adjacent nodes. With the help of networkx, we convert the edge list to a [.gexf](https://gephi.org/gexf/format/) file.
 
-Gephi has many settings and options to customize the graph. After modifying and experimenting with various settings to best represent our user data, the results are as follows:
+Gephi has many settings and options to customize the graph. We chose the YiFan Hu proportional layout. 
+
+After modifying and experimenting with various settings to best represent our user data, the results are as follows:
 
 ![]()
 
