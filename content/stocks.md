@@ -18,6 +18,8 @@ Here's a way to display stock price data fetched from Yahoo Finance, along with 
 
 The application is built using the Python framework **Flask**, along with the addition of features such as the ability to search both databases by company symbol or date. The stock price data is also aggregated at the industry-level using **Apache Spark**.
 
+![]()
+
 ---
 
 ## Project outline
@@ -28,6 +30,7 @@ The application is built using the Python framework **Flask**, along with the ad
 5. Unify the data sources within our Flask framework and build the application.
 
 ---
+![]()
 
  ### 1. Using APIs to Fetch Data
 
