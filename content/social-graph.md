@@ -35,6 +35,7 @@ The software repositories investigated are gathered from the [Common Vulnerabili
 2. [Motivation and Problem Statement](#motivation-and-problem-statement)
 3. [Methodology and Approach](#methodology-and-approach)
 4. [Results](#results)
+5. [Conclusion](#conclusion)
 
 ---
 
@@ -100,22 +101,55 @@ To build the graphs, we utilized the Python package [networkx](https://networkx.
 
 First, the CSV files of all users' data are imported into Jupyter notebooks and converted to a [Pandas](https://pandas.pydata.org/) dataframe in Python. The dataframe columns consist of the *username* and the *repository name*. The data is cleaned and transformed. We use the [itertools.combinations](https://docs.python.org/3/library/itertools.html#itertools.combinations) function to generate all possible combinations of user pairs and append these to a new dataframe. The result is an edge list of users, which is a computer-readable way to represent adjacent nodes. With the help of networkx, we convert the edge list to a [.gexf](https://gephi.org/gexf/format/) file.
 
-Gephi has many settings and options to customize the graph. We chose the YiFan Hu proportional layout. 
+This graph file can be read by and imported into our network visualization software, Gephi. Gephi has detailed settings and options to customize the appearance of the graph. 
 
-After modifying and experimenting with various settings to best represent our user data, the results are as follows:
+We chose the *Yifan Hu Proportional* layout, which is very similar to the original [Yifan Hu layout](http://yifanhu.net/PUB/graph_draw_small.pdf), which is a fast algorithm with good quality results on larger graphs. To decrease the complexity, this algorithm combines a force-directed model with a graph coarsening technique (called a multilevel algorithm). A [Barnes-Hut simulation](https://en.wikipedia.org/wiki/Barnes%E2%80%93Hut_simulation) approximates the repulsive forces on one node from a cluster of distant nodes, which considers them as one super-node. The only difference is that the proportional version calculates node locations with a proportional displacement technique. 
+
+After modifying and experimenting with Gephi's settings to best represent our user data, the results are as follows:
 
 ![]()
 
 
 ### Results
 
+Here is the overall graph of the users. 
 ![](/images/network1.png)
+
+The **edge weight**, which is thickness of the lines, represents how many repositories the two users have in common.
+
+To narrow down our users, we filtered by users who have at least 10 repositories in common. This resulted in about 300 nodes, representing the users, and about 2,500 edges, representing the connections between users. So two users will have a connection if they starred at least 10 repositories in common. The maximum number of starred repositories in common we found was 26 (highest edge weight = 26)
+
+We can see by the shape of the graph that the most active users, who have more connections that the others, are focused in the center. And the less active users are on the edges.
+
+![]()
+
+Here is a close up of one of the users as an example.
+The user 'denji' has the most number of connections with other users (connected with about 200 other users). The closeup depicts the connections with other users who starred same repos as denji.
+
 ![](/images/network2.png)
+
+As shown by the closeup image example, we can identify several users of interest who have more connections and more repositories in common with others. This is visualized by the greater quantity of edges comes from those user nodes, and the higher edge weight (thickness).
+
+
+![]()
+
+Distribution of the node [degrees](https://en.wikipedia.org/wiki/Degree_(graph_theory)):
 ![](/images/degree-distrb.png)
 
-#### Analysis
+The average degree is around 17, thus 17 is the average number of connections with other users. 
 
-<!-- TODO: -->
-\* *Page under construction* *
+
+
+![]()
+
+### Conclusion
+
+We discovered more users than hypothesized to have an interest in these malicious repositories, as analyzed by their starring behavior on Github. 
+
+This could prove to be valuable information for cyber threat attribution by playing a role in identifying potential threat actors. Our results could lay the groundwork for further research on these specific users identified in our graph. 
+
+In the future we can research these users elsewhere on the web, and study their behaviors and intentions on other platforms. We can also further analyze and evaluate the graphs using machine learning methods. For instance the Neo4j platform could help identify more important patterns within the graphs with AI methods.
+
+![]()
 
 [View the project code on GitHub](https://GitHub.com/GitHub-cve-social-graph/network_graphs)
