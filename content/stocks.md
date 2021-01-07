@@ -41,14 +41,17 @@ Next, the Google News data is fetched using the [Google News API](https://pypi.o
 
 ![]()
 
+---
 <!-- TODO: -->
-\* *Page under construction* *
+## \* *Page under construction* *
+---
+![]()
 
 ### 2. Data Storage on GCP 
 
 The stock price data for the relevant date range is collected and first inserted into a local MySQL database instance. Then the records are uploaded directly to the Google Cloud SQL database. 
 
-MySQL is the type of database chosen for reasons XYZ. 
+MySQL is the type of database chosen.
 
 GCP is an easy and free way to store data in the cloud. It will be accessed by the app later.
 
