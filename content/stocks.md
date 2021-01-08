@@ -12,11 +12,11 @@ date = "2020-03-28"
 
 This web application displays stock price data fetched from Yahoo Finance, along with relevant news articles pertaining to the companies, and display them in a user-friendly web application interface (UI). The aim is to provide a easy-to-use way to track companies' stock market performance and keep up-to-date with their latest relevant news. 
 
-![](/images/tools_stock.png)
+![](/images/tools-stock-app.png)
 
-**MySQL on Google Cloud Platform** is used to store the stock prices data and **MongoDB Atlas** (NoSQL cloud database) is used to store the news articles data. 
+**MySQL on [Google Cloud Platform](https://cloud.google.com/sql)** is used to store the stock prices data and **[MongoDB Atlas](https://www.mongodb.com/cloud)** (NoSQL cloud database) is used to store the news articles data. 
 
-The application is built using the Python framework **Flask**, along with the addition of features such as the ability to search both databases by company symbol or date. The stock price data is also aggregated at the industry-level using **Apache Spark**.
+The application is built using the Python framework **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**, along with the addition of features such as the ability to search both databases by company symbol or date. The stock price data is also aggregated at the industry-level using **[Apache Spark](https://spark.apache.org/docs/latest/)**.
 
 ![]()
 
@@ -41,47 +41,68 @@ Next, the Google News data is fetched using the [Google News API](https://pypi.o
 
 ![]()
 
----
-<!-- TODO: -->
-## \* *Page under construction* *
----
-![]()
 
 ### 2. Data Storage on GCP 
 
-The stock price data for the relevant date range is collected and first inserted into a local MySQL database instance. Then the records are uploaded directly to the Google Cloud SQL database. 
+The stock price data for the relevant date range is collected and inserted into the Google Cloud Platform (GCP) database. MySQL, one of the most popular open-source SQL databases, is the database chosen. Its many features include complete ACID support, scability, high-performance engine, ANSI-standard SQL, and much more. GCP is an easy and inexpensive way to store data in the cloud with SQL instances. The database will be accessed by the app later.
 
-MySQL is the type of database chosen.
+Within Python, the package [PyMySQL](https://pymysql.readthedocs.io/en/latest/) is used to connect to the cloud database. 
+```
+for i in Symbols:
+    symbol = yf.Ticker(i)
+    df = symbol.history(start=start, end=end)
+        cur.execute("CREATE TABLE " + i + "(date date,open varchar(250),high varchar(250),low varchar(250),close varchar(250),volume varchar(250),dividends varchar(250))")
+        for row in df.iterrows():
+            date = row[1][7]
+            open1 = row[1][0]
+            high = row[1][1]
+            low = row[1][2]
+            close = row[1][3]
+            volume = row[1][4]
+            dividends=row[1][5]
+            cur.execute(f"INSERT INTO " + i + "(date,open,high,low,close,volume,dividends) VALUES " + f"('{date}','{open1}','{high}','{low}','{close}','{volume}','{dividends}');")
+```  
+![](/images/gcp-stock-db.png)
 
-GCP is an easy and free way to store data in the cloud. It will be accessed by the app later.
 
 <!-- Check out my blog post on getting started with MySQL on GCP [here](link).  -->
-
-<!-- INSERT SCREENSHOTS HERE  -->
 
 ![]()
 
 ### 3. Data Storage on MongoDB Atlas.
 
-The news data for S&P 500 companies in the date range is collected and uploaded directly to the collections in MongoDB Atlas with the help of PyMongo. 
+After scraping the news data for S&P 500 companies in the date range specificed, the data is cleaned and transformed in Jupyter notebooks before being uploaded directly to the collections in MongoDB Atlas. The [PyMongo](https://pymongo.readthedocs.io/en/stable/) package is used to connect to the database. 
 
 <!-- Check out my blog post on MongoDB NoSQL databases [here](link). -->
 
-<!-- INSERT SCREENSHOTS HERE -->
+![](/images/stocks-mongodb.png)
 
 ![]()
 
 ### 4. Data Transformation and Aggregation with Spark
 
-Apache Spark is utilized for data cleaning, transformation, and aggregation. After the raw data is pulled from Yahoo Finance for each company and date, the PySpark package facilitates the usage of Spark's parallel processing capabilities. 
+Apache Spark is utilized for data cleaning, transformation, and aggregation. After the raw data is pulled from Yahoo Finance for each company and date, the [PySpark](https://spark.apache.org/docs/latest/api/python/index.html) package facilitates the usage of Spark's parallel processing capabilities. 
 
-<!-- Check out my blog post on Spark [here](link). -->
+Example of how industry-level data is aggregated with Spark:
+```
+sc = SparkContext.getOrCreate()
+spark = SparkSession(sc)
+stockspark = spark.read.json('stockdata.json')
+companyspark = spark.read.json('companyinfo.json')
+sectorjoin = stockspark.join(companyspark, stockspark.name == companyspark.Symbol).select(stockspark.date, companyspark.Symbol,
+                                                                                          stockspark.open, stockspark.close, stockspark.high, stockspark.low, stockspark.volume, stockspark.dividends, companyspark.Sector)
+health_care = sectorjoin[(sectorjoin.Sector == 'Health Care')].groupBy(['Symbol', 'Sector']).agg(
+    fc.max('close').alias('Period_High'), fc.min('close').alias('Period_Low'))
+information_technology = sectorjoin[(sectorjoin.Sector == 'Information Technology')].groupBy(
+    ['Symbol', 'Sector']).agg(fc.max('close').alias('Period_High'), fc.min('close').alias('Period_Low'))
 
-<!-- INSERT SCREENSHOT -->
+```
 
 The resulting transformed data is the high, or max price, and low, or min price, over the entire time period, as well as the date of the occurring high or low price. Each row represents a company in the specified industry.
 
-The Spark results are stored in additional tables in the MySQL database on GCP.
+The project includes the industries organized by sectors of the S&P 500: **Health Care, Information Technology, Communication Services, Consumer Discretionary, Utilities, Financials, Materials, Real Estate, Consumer Staples, and Energy**.
+
+The Spark results are stored in additional tables in the MySQL cloud database.
 
 ![]()
 
@@ -89,13 +110,17 @@ The Spark results are stored in additional tables in the MySQL database on GCP.
 
 The aim is to build a UI that unifies all these data sources (MySQL on GCP, MongoDB) to display the database results in a user-friendly manner, along with providing additional search capabilities.
 
-Flask is a lightweight microframework for building web applications. The flexibility and easy integration with both SQL and NoSQL databases makes Flask an ideal choice for this project.
+[Flask](https://flask.palletsprojects.com/en/1.1.x/) is a lightweight microframework for building web applications. The flexibility and easy integration with both SQL and NoSQL databases makes Flask an ideal choice for this project.
 
 
 
 
 
-
+---
+<!-- TODO: -->
+## \* *Page under construction* *
+---
+![]()
 
 ![]()
 
