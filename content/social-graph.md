@@ -54,6 +54,8 @@ In an ever-expanding digital world with exponentially increasing amounts of gene
 
 In particular, social network graphs are a compelling way to model interactions between users. For example, graphs can be built from Facebook data that visualize how friends are connected. Twitter social graphs can model retweets or likes between users. 
 
+![](https://www.researchgate.net/profile/Fredrik_Erlandsson2/publication/261278056/figure/fig1/AS:668996613439490@1536512630210/Shows-directed-and-weighted-graph-of-a-network-of-social-interactions-formed-around-a.png)
+
 ![]()
 
 ### Motivation and Problem Statement
@@ -128,7 +130,7 @@ The user 'denji' has the most number of connections with other users (connected 
 
 ![](/images/network2.png)
 
-As shown by the closeup image example, we can identify several users of interest who have more connections and more repositories in common with others. This is visualized by the greater quantity of edges comes from those user nodes, and the higher edge weight (thickness).
+As shown by the closeup example, we can identify several users of interest who have more connections and more repositories in common with others. This is visualized by the greater quantity of edges comes from those user nodes, and the higher edge weight (thickness). The software also allows us to manually zoom in/out to explore the graph and view which users have the most connections.
 
 
 ![]()
@@ -136,7 +138,7 @@ As shown by the closeup image example, we can identify several users of interest
 Distribution of the node [degrees](https://en.wikipedia.org/wiki/Degree_(graph_theory)):
 ![](/images/degree-distrb.png)
 
-The average degree is around 17, thus 17 is the average number of connections with other users. 
+The average degree is around 17. Thus, 17 is the average number of connections with other users. 
 
 
 
@@ -144,11 +146,11 @@ The average degree is around 17, thus 17 is the average number of connections wi
 
 ### Conclusion
 
-We discovered more users than hypothesized to have an interest in these malicious repositories, as analyzed by their starring behavior on Github. 
+We discovered more users than hypothesized to have an interest in these malicious repositories, as indicated by their starring behavior on Github. 
 
-This could prove to be valuable information for cyber threat attribution by playing a role in identifying potential threat actors. Our results could lay the groundwork for further research on these specific users identified in our graph. 
+This could prove to be valuable information for cyber threat attribution by playing a role in IDing potential threat actors. Our results could lay the groundwork for further research on specific users identified in our graph. 
 
-In the future we can research these users elsewhere on the web, and study their behaviors and intentions on other platforms. We can also further analyze and evaluate the graphs using machine learning methods. For instance the Neo4j platform could help identify more important patterns within the graphs with AI methods.
+In the future we can research these users elsewhere on the web, and study their behaviors and intentions on other platforms. We can also further analyze and evaluate the graphs using machine learning methods. For instance the [Neo4j](https://neo4j.com/) platform could help us identify more important patterns within the graphs with advanced analytics and AI methods.
 
 ![]()
 
