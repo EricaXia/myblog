@@ -76,15 +76,19 @@ Our Initial Questions:
 
 We start with gathering data using the GitHub API and building a dataset of software repositories and users who interact with them (starred, forked, cloned, etc). 
 
-#### Gathering and Storing Data: CVEs
+![]()
 
-The [National Vulnerabilities Database API](https://nvd.nist.gov/vuln/data-feeds) is used to gather the list of CVEs. We specifically retrieve all CVEs with the keyword "GitHub". Each response is in JSON format and has various elements with information about the CVE. We obtained 15,000 CVEs. From those CVEs, there were over 6,000 malicious GitHub reference links.
+#### 1. Gathering and Storing Data: CVEs
 
-The CVE data is stored as documents in **MongoDB Atlas**. We use the **PyMongo** package in Python to store all documents in the same collection to the cloud. Next, we query the database of extracted CVEs to find reference links containing the “Exploit” tag, and then we extract URL links that contain "GitHub.com".
+The [National Vulnerabilities Database API](https://nvd.nist.gov/vuln/data-feeds) is used to gather the list of CVEs. We specifically retrieve all CVEs with the keyword "github". Each response is in JSON format and has various elements with information about the CVE. We obtained 15,000 CVEs. From those CVEs, there were over 6,000 malicious GitHub reference links.
+
+The CVE data is stored as documents in **MongoDB Atlas**. We use the **PyMongo** package in Python to store all documents in the same collection to the cloud. Next, we query the database of extracted CVEs to find reference links containing the “Exploit” tag, and then we extract URL links that contain "github.com".
 
 In the end, we are left with about 2,000 unique GitHub repos to query from.
 
-#### Gathering Data: GitHub Users
+![]()
+
+#### 2. Gathering Data: GitHub Users
 
 The links to the repositories in question are then used to query from GitHub through the [GitHub GraphQL API](https://docs.GitHub.com/en/free-pro-team@latest/graphql). For the purposes of creating the initial social graphs, we focused on only stargazers (users who starred a repository). We queried for the stargazers’ information and compiled them into CSV files.
 
@@ -95,9 +99,9 @@ Distribution of stargazers:
 
 As shown by the histogram, the majority of users only star between 10 and 15 of the repositories investigated. A minority of users star greater than 15. We are most interested in the users who star a large number of repositories.
 
+![]()
 
-
-#### Building Social Network Graphs
+#### 3. Building Social Network Graphs
 
 To build the graphs, we utilized the Python package [networkx](https://networkx.org/) and the open-source visualization software [Gephi](https://gephi.org/).
 
