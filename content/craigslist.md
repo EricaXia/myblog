@@ -1,6 +1,6 @@
 +++
 title = "Exploratory Data Analysis of Craigslist Housing Data"
-tags = ['Data Analysis', 'Spatial Analysis', 'Modeling', 'EDA', 'Data Visualization']
+tags = ['Data Analysis', 'Spatial Analysis', 'Modeling', 'EDA', 'Data Visualization', 'R']
 date = "2018-12-20"
 +++
 
