@@ -12,7 +12,7 @@ What is Hadoop and what is it used for? How do the components of Hadoop, includi
 
 ## What is Hadoop?
 
-Hadoop is a open-source Java software framework for the storage and distributed processing of big data. It runs on clusters of commodity hardware. Hadoop can be summarized as several major components:
+Hadoop is a open-source Java software framework for the storage and distributed processing of big data, first developed by Google in 2004. It runs on clusters of commodity hardware. Hadoop can be summarized as several major components:
 
 1. **Hadoop Distributed File System (HDFS)** - Provides distributed data storage
 2. **YARN** - Responsible for resource allocation and management, job scheduling, and more tasks
@@ -23,12 +23,12 @@ Hadoop is a open-source Java software framework for the storage and distributed 
 
 Why do we need Hadoop? The ever-growing prevalence of large-scale data requires a distributed model of processing and storage for efficiency. Hadoop arose to address these concerns. It can scale to petabytes in storage and processing capabilities.
 
-Compared to NFS (Network File System), HDFS is defined to withstand failures, which is known as fault tolerance. This is because it stores multiple replicas (copies) of files, whereas a NFS does not have any built-in fault tolerance.
+Compared to a Network File System (NFS), HDFS is defined to withstand failures, which is known as fault tolerance. This is because it stores multiple replicas (copies) of files, whereas a NFS does not have any built-in fault tolerance.
 
 
 ### 1. HDFS: Hadoop Distributed File System
 
-HDFS runs on a network of clusters, which in turn contain many nodes. A **node** is a process running on a virtual or physical machine. A **cluster** is a collection of nodes that are networked together to store data and perform parallel processing. A physical collection of nodes, approximately thirty to forty nodes, is called a **rack**. One Hadoop cluster may contain many racks. A network of clusters comprises HDFS.
+HDFS runs on a network of clusters, which in turn contain many nodes. A **node** is a process running on a virtual or physical machine. A **cluster** is a collection of nodes that are networked together to store data and perform parallel processing. A physical collection of nodes, approximately thirty to forty nodes, is called a **rack**. One Hadoop cluster may contain many racks. A network of clusters comprises the HDFS.
 
 HDFS is structured by data blocks. Each file is pre-divided into blocks that are then stored across a cluster of machines. Blocks in HDFS are 128 MB in size, compared to the much smaller disk block size of 4 KB. The larger block size allows for faster streaming reads and reduces the amount of metadata required per file.
 
@@ -49,9 +49,11 @@ This issue brings about the introduction of the **High Availability (HA)** featu
 
 ### 2. MapReduce Programming Paradigm
 
+As a programming framework, MapReduce was designed for big data processing on distributed systems. 
+
 The process of MapReduce can be summarized in the following steps:
 
-1. Takes input data.
+1. Takes input data as a set of key-value pairs.
 2. Splits the data. For instance, this can be splitting a table into its individual rows.
 3. Map Phase: Maps any function on each element that doesn't require any other elements.
 4. Shuffle and Sort Phase: Shuffling transfers the mappers' output to the reducers. Sorting merges and sorts the mappers' outputs. Shuffle and sort occurs simultaneously. For instance, sort all rows by the numerical count of a specific element.

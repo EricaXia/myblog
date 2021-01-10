@@ -17,9 +17,9 @@ What are NoSQL databases? Simply put, NoSQL databases are databases that *don't*
 
 ### NoSQL vs. SQL
 
-SQL relational databases allow us to store data in tabular format (data is organizd in relational tables and rows.). We can perform either DDL or DML operations. DML, or Data Definition Language, sets up the relational database schema (which defines the tables, attributes, indexes, relations, and more). However, the rigid structure of relational databases can sometimes pose a challenge for developers. Hence, NoSQL databases arose as a more flexible, agile storage solution.
+SQL relational databases allow us to store data in tabular format (data is organized in relational tables and rows.). We can perform either DDL or DML operations. DDL, or Data Definition Language, sets up the relational database schema (which defines the tables, attributes, indexes, relations, and more). DML, or Data Manipulation Language, defines the operations to actually insert, modify, or delete records. The rigid structure of relational databases can sometimes pose a challenge for developers. Hence, NoSQL databases arose as a more flexible, agile storage solution.
 
-NoSQL databases have more flexible schemas that can be changed on-the-go as project requirements may change. Additionally, NoSQL provides opportunities for horizontal scaling to add a greater quantity of inexpensive commodity hardware, whereas SQL databases typically require vertical scaling to larger servers.
+NoSQL databases have more flexible schemas that can be changed on-the-go as project requirements may change. We also see a potentially vast improvement in performance. Additionally, NoSQL provides opportunities for horizontal scaling to add a greater quantity of inexpensive commodity hardware, whereas SQL databases typically require vertical scaling to larger servers.
 
 ![]()
 
