@@ -65,17 +65,15 @@ for i in Symbols:
 ![](/images/gcp-stock-db.png)
 
 
-<!-- Check out my blog post on getting started with MySQL on GCP [here](link).  -->
-
 ![]()
 
 ### 3. Data Storage on MongoDB Atlas.
 
 After scraping the news data for S&P 500 companies in the date range specificed, the data is cleaned and transformed in Jupyter notebooks before being uploaded directly to the collections in MongoDB Atlas. The [PyMongo](https://pymongo.readthedocs.io/en/stable/) package is used to connect to the database. 
 
-<!-- Check out my blog post on MongoDB NoSQL databases [here](link). -->
-
 ![](/images/stocks-mongodb.png)
+
+(P.S. Check out my blog post on NoSQL databases [here](/post/nosql_1/).)
 
 ![]()
 
@@ -147,14 +145,12 @@ def index():
 # Page template to show company stock info
 @main.route('/<sym>', methods=['GET', 'POST'])
 def show(sym):
-
     # SQL results for the company
     price_results = get_prices(symbol=sym, limit=40)  # a list of dicts
-    # Mongo results
+    # MongoDB results
     news_col = mongo.db.articles
     mdb_results = news_col.find({"Symbol": sym}).limit(15).sort("dt", -1)
-
-    # Search feature
+    # Adds Search Feature
     form = DateSearchForm(request.form)
     if request.method == 'POST' and form.validate():
         dt_query = form.date.data
@@ -166,7 +162,6 @@ def show(sym):
         news_res = news_col.find({"Symbol": sym, "dt": dt_query_str}).limit(
             15).sort("dt", -1)  # this is a cursor
         new_res_list = list(news_res)
-
         return render_template('search_results.html', sym=sym, form=form, price_results=price_res, news_results=news_res, news_res_list=new_res_list)
 
     # Show current price
@@ -181,9 +176,11 @@ def show(sym):
 
 ```
 
-HTML files like `index.html` contain Jinja enabled HTML content, displaying the data in formatted way. The app is stylized with the [Bootstrap CSS framework](https://getbootstrap.com/).
+HTML files like `index.html` are rendered with Jinja content, so they can display Python content. The app is stylized with the [Bootstrap CSS framework](https://getbootstrap.com/), displaying the data in a formatted way.
 
 ![]()
+
+---
 
 ![]()
 
