@@ -115,7 +115,7 @@ The aim is to build a UI that unifies all these data sources (MySQL on GCP, Mong
 Project Structure:
 ![](/images/stock-directory.png)
 
-
+`main.py` contains the main script, serving as the blueprint for the app. As an example, a snippet of this code is shown below. 
 ```
 from flask import Blueprint, render_template, Flask, request, make_response, redirect, url_for
 from pymysql import ProgrammingError
@@ -181,17 +181,13 @@ def show(sym):
 
 ```
 
+HTML files like `index.html` contain Jinja enabled HTML content, displaying the data in formatted way. The app is stylized with the [Bootstrap CSS framework](https://getbootstrap.com/).
 
----
-<!-- TODO: -->
-## \* *Page under construction* *
----
 ![]()
 
 ![]()
 
-<!-- Overall, the highlight of this project was accessing APIs to gather the data, storing data using different storage solutions, and integrating it all together in a meaningful way on an intuitive user interface. This way a user can research a company or industry of interest, and immediately view recent prices and news articles for that company, and its industry-aggregated data.
- -->
+Overall, the highlight of this project was accessing APIs to gather the data, storing data using different storage solutions, and integrating it all together in a meaningful way on an intuitive user interface. This way a user can research a company or industry of interest, and immediately view recent prices and news articles for that company, and its industry-aggregated data.
 
 
  
