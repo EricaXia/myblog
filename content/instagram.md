@@ -22,9 +22,11 @@ Social media provides an abundance of data for diet and nutritional behaviors. W
 - How does the nutritional content of food posts vary by geography and and hashtag associations?
 - What new insights on population health and nutrition trends can be obtained by studying image and spatial data?
 
+*The work for this project was first inspired by this [paper](https://arxiv.org/pdf/1503.01546.pdf) by Dr. Yelena Mejova and her team at the International AAAI Conference on Web and Social Media (ICWSM).*
+
+![]()
 
 ---
-
 #### Table of Contents
 
 1. [Background and Motivation](#1-background)
@@ -32,13 +34,18 @@ Social media provides an abundance of data for diet and nutritional behaviors. W
 3. [Data Visualization](#3-data-visualization)
 ---
 
+![]()
+
+
 ## 1. Background 
 
 <br />
 
 ![](/images/ig_food-photo.jpg#center)
 
-Official public health estimates population-level nutritional quality and patterns come from self-report survey data based on small samples and provide coarse surveillance measures; the best available data source in Los Angeles employs a sample population on the order of 5,000 LA residents to provide a limited set of diet/nutrition variables such as frequency of fruit and vegetable consumption and fast food consumption. Social media data suffers from multiple important biases including self-presentation and self-selection, but provides information that survey data cannot: it is at a large population scale, can provide sentiment information, and demonstrate social components including likes, follows, and behavior clustering. Using an Instagram dataset of all geo-located posts at food outlets in Los Angeles for 3 months in 2014, this project will investigate whether Instagram posts, despite implicit biases (and to the extent possible, accounting for these biases), can provide a representative health signal, informative of the quality of population nutrition and dietary patterns at a highly-resolved (e.g. census tract level) spatial scale. 
+Official public health estimates population-level nutritional quality and patterns come from self-report survey data based on small samples and provide coarse surveillance measures; the best available data source in Los Angeles employs a sample population on the order of 5,000 LA residents to provide a limited set of diet/nutrition variables such as frequency of fruit and vegetable consumption and fast food consumption. Social media data suffers from multiple important biases including self-presentation and self-selection, but provides information that survey data cannot: it is at a large population scale, can provide sentiment information, and demonstrate social components including likes, follows, and behavior clustering. 
+
+This project will investigate whether Instagram posts, despite implicit biases (and to the extent possible, accounting for these biases), can provide a representative health signal, informative of the quality of population nutrition and dietary patterns at a highly-resolved (e.g. census tract level) spatial scale. 
 
 <br />
 
@@ -78,10 +85,12 @@ We pulled data from all other the globe to analyze differences in post content. 
 ![](https://github.com/EricaXia/academic-kickstart/raw/master/content/project/ckids/worldmap.png)
 
 
+---
 
 <!-- TODO: -->
-\* *Page under construction* *
+## \* *Page under construction* *
 
+---
 
 
 
