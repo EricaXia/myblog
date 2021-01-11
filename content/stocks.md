@@ -23,16 +23,22 @@ The application is built using the Python framework **[Flask](https://flask.pall
 ---
 
 #### Project outline
-1. Fetch data from Yahoo Finance and Google News using APIs.
-2. Store the stock prices (time-series data) in MySQL relational tables on the Google Cloud Platform. 
-3. Store the news articles metadata as key-value pair documents in MongoDB Atlas.
-4. Data transformation and aggregation with Apache Spark
-5. Unify the data sources within our Flask framework and build the application.
+1. [Using APIs to fetch Data](#using-apis-to-fetch-data)
+	- Fetch data from Yahoo Finance and Google News using APIs.
+2. [Data Storage on GCP](#data-storage-on-gcp)
+	- Store the stock prices (time-series data) in MySQL relational tables on the Google Cloud Platform. 
+3. [Data Storage on MongoDB Atlas](#data-storage-on-mongodb-atlas)
+	- Store the news articles metadata as key-value pair documents in MongoDB Atlas.
+4. [Data Transformation and Aggregation with Spark](#data-transformation-and-aggregation-with-spark)
+	- Aggregate prices at the industry level as new MySQL tables
+5. [Build the Flask Application](#build-the-flask-application)
+	- Unify the data sources within our Flask framework and build the application.
 
 ---
 ![]()
 
- ### 1. Using APIs to Fetch Data
+
+### Using APIs to Fetch Data
 
 First, the Yahoo Finance data is fetched using the [Yahoo Finance API](https://pypi.org/project/yahoo-finance/) (Python module). A date range is specified to gather stock prices for a given company. This project focuses on gathering prices for companies on the **S&P 500**. The data ranges from the beginning of the year 2020 (2020-01-02 is the first date) till the latest time the data is retrieved. Stock data is not collected when the market closes (weekends, holidays). The time-series stock price data consists of daily open price, highest, lowest, close price, daily trading volume, dividends paid, stock splits and date. 
 
@@ -42,7 +48,7 @@ Next, the Google News data is fetched using the [Google News API](https://pypi.o
 ![]()
 
 
-### 2. Data Storage on GCP 
+### Data Storage on GCP 
 
 The stock price data for the relevant date range is collected and inserted into the Google Cloud Platform (GCP) database. MySQL, one of the most popular open-source SQL databases, is the database chosen. Its many features include complete ACID support, scability, high-performance engine, ANSI-standard SQL, and much more. GCP is an easy and inexpensive way to store data in the cloud with SQL instances. The database will be accessed by the app later.
 
@@ -67,7 +73,7 @@ for i in Symbols:
 
 ![]()
 
-### 3. Data Storage on MongoDB Atlas.
+### Data Storage on MongoDB Atlas
 
 After scraping the news data for S&P 500 companies in the date range specificed, the data is cleaned and transformed in Jupyter notebooks before being uploaded directly to the collections in MongoDB Atlas. The [PyMongo](https://pymongo.readthedocs.io/en/stable/) package is used to connect to the database. 
 
@@ -77,7 +83,7 @@ After scraping the news data for S&P 500 companies in the date range specificed,
 
 ![]()
 
-### 4. Data Transformation and Aggregation with Spark
+### Data Transformation and Aggregation with Spark
 
 Apache Spark is utilized for data cleaning, transformation, and aggregation. After the raw data is pulled from Yahoo Finance for each company and date, the [PySpark](https://spark.apache.org/docs/latest/api/python/index.html) package facilitates the usage of Spark's parallel processing capabilities. 
 
@@ -104,7 +110,7 @@ The Spark results are stored in additional tables in the MySQL cloud database.
 
 ![]()
 
-### 5. Building the Flask Application
+### Build the Flask Application
 
 The aim is to build a UI that unifies all these data sources (MySQL on GCP, MongoDB) to display the database results in a user-friendly manner, along with providing additional search capabilities.
 
