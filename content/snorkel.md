@@ -5,14 +5,17 @@ date = "2019-11-06"
 +++
 
 ![](https://github.com/EricaXia/snorkel/raw/master/images/logo.png)
-### Relation Extraction of Virus-Host Species from Epidemiological Research Literature (NLP Project)
+### "Relation Extraction of Virus-Host Species from Epidemiological Research Literature"
 #### University of California, Davis - Epicenter for Disease Dynamics
+Project led by [Dr. Pranav Pandit](https://panditpranav.github.io/) of the UC Davis One Health Institute. 
 
-<br />
-<br />
+![]()
 
+---
 
+![]()
 
+### Summary 
 In this project, we build a machine learning system (with the help of the [Snorkel](https://www.snorkel.org) framework developed by Stanford DAWN) to extract and identify correct mentions of virus and animal host species relations from academic literature in the context of epidemiological research.
 
 Considering a large majority of infectious diseases are spread from animals to humans, zoonotic diseases have become an important topic of study and the subject of many research studies. Various species of viruses, such as Flaviviruses, may cause the outbreak of viral zoonotic disease. Hence, the relations between viral and animal host species are major factors in understanding the transmission and characteristics of zoonotic diseases. Natural Language Processing extraction techniques can be used to identify species-level mentions of viral-host relations in academic text. 
