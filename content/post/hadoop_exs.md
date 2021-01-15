@@ -16,7 +16,7 @@ draft = false
 2. [Installing and Setting Up Hadoop](#installing-and-setting-up-hadoop)
 3. [Starting HDFS](#starting-hdfs)
 4. [Working with HDFS (Examples)](#working-with-hdfs)
-5. [MapReduce Examples](#mapreduce-examples)
+5. [MapReduce Example](#mapreduce-example)
 
 ![]()
 
@@ -73,8 +73,6 @@ This specifies an empty string as the password, and generates public (id_rsa.pub
 
 To test start the system, type `ssh localhost` and `exit` to exit.
 
-<INSERT SCREENSHOT HERE>
-
 
 ### Starting HDFS
 Navigate to the Hadoop installation directory. By formatting the NameNode, all the metadata related to the DataNodes (contained in Fsimage and Editlog files) will be formatted. Then, we can start the HDFS daemons (NameNode and DataNodes).
@@ -109,7 +107,117 @@ Example of listing directory contents:
 bin/hdfs dfs -ls /user/ec2-user/
 ```
 
-### MapReduce Examples
+![]()
 
-To be continued.
+---
+
+![]()
+
+### MapReduce Example
+
+MapReduce programs are written in Java. In order to compile Java files, we'll need to make sure HADOOP_CLASSPATH was properly exported in the previous steps.
+
+Let's take the example of having COVID-19 patient data in our database. The table name is `region` with attributes such as `province`, `nursing_home_count`, and `elderly_population_ratio`, which will be used for the query. The example SQL query is the following:
+
+```
+SELECT province, SUM(nursing_home_count)
+FROM covid19.region
+WHERE elderly_population_ratio >= 20
+GROUP BY province
+ORDER BY province
+```
+
+We'll implement a Hadoop MapReduce program `Sum.java` to emulate the above query and produce the same output. Within the `Sum` class are both the Mapper and the Reducer functions. Additional steps are needed to replace quotes in the string values and convert to proper data types. Input data is read in from a CSV file.
+
+```
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
+public class Sum {
+    // Mapper
+    public static class SumMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+
+        private final static IntWritable one = new IntWritable(1); // constant of integer 1
+
+        @Override
+        public void map(LongWritable offset, Text lineText, Context context) throws IOException, InterruptedException {
+            // Read input line by line into variables
+            String line = lineText.toString();
+            String province = line.split(",")[0];
+            String city = line.split(",")[1];
+            String elderly_population_ratio = line.split(",")[2];
+            String ep_ratio0 = elderly_population_ratio.replace("'", "");
+            ep_ratio0 = ep_ratio0.replaceAll("\\s", ""); 
+            String nursing_home_count = line.split(",")[3];
+            String nh_count0 = nursing_home_count.replace("'", "");
+            nh_count0 = nh_count0.replaceAll("\\s", ""); 
+            // Convert data types
+            float ep_ratio = Float.parseFloat(ep_ratio0);
+            int nh_count = Integer.parseInt(nh_count0);
+            // Output
+            if (ep_ratio >= 20) {
+                context.write(new Text(province), new IntWritable(nh_count));
+            }
+        }
+    }
+    
+    // Reducer
+    public static class SumReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+        @Override
+        public void reduce(Text province, Iterable<IntWritable> counts, Context context)
+                throws IOException, InterruptedException {
+
+            int sum = 0;
+            // Loop over the array, sum all elements (increment them to `sum`)
+            for (IntWritable count : counts) {
+                sum += count.get();
+            }
+            // Output the `sum` variable
+            context.write(province, new IntWritable(sum));
+
+        }
+    }
+    
+    // Main Class to combine mapper and reducer 
+    public static void main(String[] args) throws Exception {
+        if (args.length != 2) {
+            System.err.println("Usage: Frequency <input path> <output path>");
+            System.exit(-1);
+        }
+      Job job = Job.getInstance();
+      job.setJarByClass(Sum.class);
+      job.setJobName("Sum");
+      FileInputFormat.addInputPath(job, new Path(args[0]));
+      FileOutputFormat.setOutputPath(job, new Path(args[1]));
+      job.setMapperClass(SumMapper.class);
+      job.setReducerClass(SumReducer.class);
+      job.setOutputKeyClass(Text.class);
+      job.setOutputValueClass(IntWritable.class);
+      System.exit(job.waitForCompletion(true) ? 0 : 1);
+    }
+}
+```
+
+
+To compile the Java file, navigate to the directory containing the program, then type:
+```
+javac -classpath ${HADOOP_CLASSPATH} Sum.java 
+jar -cvf Sum.jar Sum*.class
+~/hadoop-3.1.2/bin/hadoop jar Sum.jar Sum region.csv output_sum
+```
+This compiles the Java program, packages the classes within a .jar file, and executes the program. The output is stored in `output_sum`, which can be accessed by typing 
+
+```
+bin/hdfs dfs -ls /user/ec2-user/output_sum
+```
 
