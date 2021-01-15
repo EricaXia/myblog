@@ -117,7 +117,9 @@ bin/hdfs dfs -ls /user/ec2-user/
 
 MapReduce programs are written in Java. In order to compile Java files, we'll need to make sure HADOOP_CLASSPATH was properly exported in the previous steps.
 
-Let's take the example of having COVID-19 patient data in our database. The table name is `region` with attributes such as `province`, `nursing_home_count`, and `elderly_population_ratio`, which will be used for the query. The example SQL query is the following:
+Let's take a COVID-19 patient database as our example. The table name is called `region` with attributes such as `province`, `nursing_home_count`, and `elderly_population_ratio`. 
+
+An example of a SQL query:
 
 ```
 SELECT province, SUM(nursing_home_count)
@@ -127,7 +129,7 @@ GROUP BY province
 ORDER BY province
 ```
 
-We'll implement a Hadoop MapReduce program `Sum.java` to emulate the above query and produce the same output. Within the `Sum` class are both the Mapper and the Reducer functions. Additional steps are needed to replace quotes in the string values and convert to proper data types. Input data is read in from a CSV file.
+We'll implement a Hadoop MapReduce program `Sum.java` to emulate the above query and produce the same output. 
 
 ```
 import java.io.BufferedReader;
@@ -208,6 +210,7 @@ public class Sum {
 }
 ```
 
+Within the `Sum` class are both the Mapper and the Reducer functions. Additional steps are needed to replace quotes in the string values and convert to proper data types. Input data is read in from a CSV file.
 
 To compile the Java file, navigate to the directory containing the program, then type:
 ```
