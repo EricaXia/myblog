@@ -1,14 +1,14 @@
 +++
 title = "Intro to Hadoop (Part One)"
 description = "What is Hadoop and what is it used for? How do the components of Hadoop, including HDFS, MapReduce, and YARN work? Let's investigate!"
+summary = "What is Hadoop and what is it used for? How do the components of the Hadoop ecosystem, including HDFS, MapReduce, and YARN work? Let's investigate in this introductory blog post series."
 tags = ['Hadoop', 'HDFS', 'MapReduce']
 date = "2020-12-22"
 draft = false
+
 +++
 
 ![](/../images/hadoop-logo.png)
-
-What is Hadoop and what is it used for? How do the components of Hadoop, including HDFS, MapReduce, and YARN work? Let's investigate!
 
 ## What is Hadoop?
 

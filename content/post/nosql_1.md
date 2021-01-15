@@ -1,6 +1,7 @@
 +++
 title = "NoSQL Databases and MongoDB Explained"
 description = "What is NoSQL and why is it needed?"
+summary = "What are **NoSQL databases**? Simply put, NoSQL databases are databases that don't store data in a traditional relational table format (SQL). Hence, they are called 'not only SQL', or NoSQL for short. Data is instead stored in one of the following types of databases: document, key-value, column, or graph. One widely used example of a *document* style NoSQL database is **MongoDB**, which will be discussed further in this post."
 tags = ['NoSQL', 'MongoDB']
 date = "2021-01-08"
 draft = false

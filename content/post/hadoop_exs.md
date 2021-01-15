@@ -1,6 +1,7 @@
 +++
 title = "Intro to Hadoop (Part Two)"
-description = "Let's see how to get started using Hadoop HDFS with examples."
+description = "Let's see how to get started using HDFS with examples."
+summary = "Let's see how to get started using **HDFS** with examples, starting by setting up an **EC2 cluster in AWS**, installing Hadoop, and working within HDFS. Lastly, we'll cover a **MapReduce** example that implements the same logic as a given SQL query."
 tags = ['Hadoop', 'HDFS', 'AWS', 'EC2', 'MapReduce']
 date = "2021-01-12"
 draft = false

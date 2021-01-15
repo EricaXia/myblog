@@ -15,6 +15,8 @@ enableEmoji            = true
 DefaultContentLanguage = "en"
 #disqusShortname        = ""
 
+# the length of text to show in a .Summary
+summaryLength = 50
 
 [Languages]
 [Languages.en]
@@ -43,3 +45,4 @@ hardWraps = true
   #google_analytics_id = ""
   twitter_username = "username"
   paginate = 5
+
