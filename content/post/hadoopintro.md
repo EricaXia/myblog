@@ -49,14 +49,14 @@ This issue brings about the introduction of the **High Availability (HA)** featu
 
 ### 2. MapReduce Programming Paradigm
 
-As a programming framework, MapReduce was designed for big data processing on distributed systems. 
+In summary, MapReduce was designed to enable large-scale data processing on distributed systems of commodity hardware clusters. MapReduce performs a *map* phase, which splits a data set into pieces to create another data set, and a *reduce* phase which aggregates or combines those pieces back together.
 
-The process of MapReduce can be summarized in the following steps:
+Steps:
 
 1. Takes input data as a set of key-value pairs.
 2. Splits the data. For instance, this can be splitting a table into its individual rows.
 3. Map Phase: Maps any function on each element that doesn't require any other elements.
-4. Shuffle and Sort Phase: Shuffling transfers the mappers' output to the reducers. Sorting merges and sorts the mappers' outputs. Shuffle and sort occurs simultaneously. For instance, sort all rows by the numerical count of a specific element.
+4. Shuffle and Sort Phase: Shuffling transfers the mappers' output to the reducers. Sorting merges and sorts the mappers' outputs. Shuffle and sort occurs simultaneously. For instance, sort all rows by the numerical count of a specific element, like [word count](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html#Example:_WordCount_v1.0).
 5. Reduce Phase: Aggregates the elements. 
 6. Outputs result.
 
@@ -65,8 +65,11 @@ The process of MapReduce can be summarized in the following steps:
 
 ### 3. YARN
 
-To be continued.
+YARN is the resource manager for Hadoop and provides of daemons and APIs needed to develop distributed applications. YARN handles and schedules requests, and acts as a helper to process and execute those requests.
 
+The core component of YARN is the ResourceManager, which decides how to efficiently allocate resources among the applications in the distributed system.
+
+---
 
 In the next post of this series, we'll look at concrete examples of how to get started running Hadoop.
 
