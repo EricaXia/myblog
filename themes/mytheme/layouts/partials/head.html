@@ -27,5 +27,7 @@
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/combined-min.css">
   {{ if isset .Site.Params "search_engine" }}<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/tipuesearch/tipuesearch.css">{{ end }}
 
+  {{ partial "mathjax_support.html" . }}
+
 </head>
 <body class="">
