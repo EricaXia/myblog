@@ -41,7 +41,7 @@ Linear Regression algorithms:
 
 ## Ridge Regression
 
-A regularized version of linear regression. *Regularized* meaning selected or fine-tuned to improve the model's predictive capability. A regularization term is added to the model in order to keep the model weights as small as possible. 
+A regularized version of linear regression. *Regularized* meaning selected or fine-tuned to improve the model's predictive capability. An $l1$ regularization term is added to the model in order to keep the model weights as small as possible. 
 
 The regularization term added to the model is calculated as:
 

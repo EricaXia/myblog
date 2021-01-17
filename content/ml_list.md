@@ -11,7 +11,7 @@ This is the master list of machine learning algorithms I will contribute pages a
 ---
 
 ### Supervised
-- Regression
+- [Regression](/regression-overview)
 	- Linear
 	- Logistic
 	- Lasso
@@ -49,7 +49,7 @@ This is the master list of machine learning algorithms I will contribute pages a
 
 
 ### Statistics
-- Hypothesis Testing, p-value
+- [PR, ROC curve, Hypothesis Testing, P-value](/stats_1)
 
 ![]()
 
