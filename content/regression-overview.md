@@ -42,7 +42,8 @@ Linear Regression algorithms:
 - Gradient Descent (Batch, Stochastic, Mini-batch)
 
 
-## Ridge Regression (L2 Regularization)
+## Ridge Regression
+### (L2 Regularization)
 
 A regularized version of linear regression. *Regularized* meaning selected or fine-tuned to improve the model's predictive capability. An $L_2$ regularization term is added to the model in order to keep the model weights as small as possible. 
 
@@ -65,7 +66,8 @@ Ridge tends to work better if the model has many parameters $\theta$ with equiva
 *Drawbacks of Ridge?* It doesn't reduce the number of features. Hence, it's not the best choice for feature selection/reduction if there are too many initial features.
 
 
-## Lasso Regression (L1 Regularization)
+## Lasso Regression 
+### (L1 Regularization)
 
 "LASSO" stands for *Least Absolute Shrinkage and Selection Operator*.
 
