@@ -5,7 +5,7 @@ date = "2021-01-16"
 +++
 
 
-This is the master list of machine learning algorithms I will contribute pages about.
+Master list of machine learning algorithms I contribute pages about.
 
 
 ---
