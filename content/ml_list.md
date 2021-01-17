@@ -20,7 +20,7 @@ This is the master list of machine learning algorithms I will contribute pages a
 	- Lasso
 	- Ridge
 
-- k-Nearest-Neighbors
+- [k-Nearest-Neighbors (kNN)](/knn)
 
 - Decision Trees
 	- Random Forest  <!-- ExtraTreesClassifier -->
