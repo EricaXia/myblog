@@ -35,11 +35,13 @@ $$ FPR = \frac{FP}{TN + FP} $$
 The Receiver operating characteristic (ROC) curve plots the *false positive rate (FPR)* on the x-axis against the *true positive rate* (or recall) on the y-axis. Various threshold settings are plotted to form this probability curve.  
 
 Example:
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Roccurves.png/440px-Roccurves.png)
+![](https://developers.google.com/machine-learning/crash-course/images/ROCCurve.svg)
 
 So what does this curve mean exactly? What does it represent? How can we use it to determine how good the model is?
 
-In general, we can compare different curves on the same plot to compare the performance of different models. The AUC, or area under the curve, can be used to summarize the models' skill. 
+In general, we can compare different curves on the same plot to compare the performance of different models at different candidate *thresholds*. Lowering the *threshold* will classify more observations as positive.
+
+The AUC, or area under the curve, can be used to summarize the models' skill. 
 
 The curve illustrates a trade-off: smaller values on the x-axis mean lower false positives and higher true negatives. Larger values on the y-axis mean there are higher true positives and lower false negatives.
 

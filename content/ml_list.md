@@ -11,6 +11,9 @@ This is the master list of machine learning algorithms I will contribute pages a
 ---
 
 ### Supervised
+
+*Supervised algorithms require labeled training data to train a prediction model and check results.*
+
 - [Regression](/regression-overview)
 	- Linear
 	- Logistic
@@ -30,6 +33,8 @@ This is the master list of machine learning algorithms I will contribute pages a
 ![]()
 
 ### Unsupervised
+
+*Unsupervised algorithms don't need labeled training data to run, and they are often used to find patterns or groupings in the data.*
 
 - Clustering
 	- k-means 
