@@ -36,6 +36,8 @@ How do we train a lin. reg. model?
 
 In order to find these parameters, we need to have a way to measure what the *best fit* would be. It's common to find parameters that minimize the [RMSE](https://en.wikipedia.org/wiki/Root-mean-square_deviation) or [MSE](https://en.wikipedia.org/wiki/Mean_squared_error).
 
+[Ordinary Least Squares (OLS)](https://en.wikipedia.org/wiki/Ordinary_least_squares) is a common way to find parameters for a linear regression model.
+
 Linear Regression algorithms:
 - Normal equation
 - SVD
