@@ -38,7 +38,7 @@ Master list of machine learning algorithms I contribute pages about.
 
 - Clustering
 	- k-means 
-	- Archetypal Analysis - Finding the Principal Convex Hull
+	- [Archetypal Analysis](/archetypal)
 
 
 ![]()
