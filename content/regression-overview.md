@@ -30,6 +30,13 @@ $ \hat{y} = h_\theta(x) = \boldsymbol{\theta \cdot x} $
 
 Where $\boldsymbol{\theta}$ represents the vector of weights or coefficients, and $\boldsymbol{x}$ represents the vector of predictor variables.
 
+What are the assumptions of a linear regression model?
+* Linearity between the predictors (x) and the target (y).
+* Independence between observations (data points).
+* Homoskedasticity of the residuals. The variance of the error terms (the difference between the predicted and actual values) stays constant.
+* Normality of Y. For any fixed value of predictor X, the target variable Y follows a normal distribution.
+
+
 How do we train a lin. reg. model?
 
 > "Training" a model means to find and set parameters for the model (in this case, $\theta$) that *best* fit the model.
