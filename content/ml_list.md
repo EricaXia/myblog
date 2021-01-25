@@ -54,7 +54,8 @@ Master list of machine learning algorithms I contribute pages about.
 
 
 ### Statistics
-- [PR, ROC curve, Hypothesis Testing, P-value](/stats_1)
+- [PR, ROC curve](/stats_1)
+- [Hypothesis testing](/notebooks/hyp_testing_1.html)
 
 ![]()
 

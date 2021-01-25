@@ -46,8 +46,3 @@ The AUC, or area under the curve, can be used to summarize the models' skill.
 The curve illustrates a trade-off: smaller values on the x-axis mean lower false positives and higher true negatives. Larger values on the y-axis mean there are higher true positives and lower false negatives.
 
 Generally, good models will have curves with a shape that curve upwards to the top left corner of the plot.
-
-
-## Bias-Variance Tradeoff
-
-## Hypothesis Testing , P-value

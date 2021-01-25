@@ -27,7 +27,7 @@ An example of a hypothesis statement structure is the "If...x..., then...y".
 
 For instance, "If we change the wording of the website button from 'Buy Now' to 'Add to Cart', it will increase the clickthrough rate." In other words, the button text is the independent variable, and the clickthrough rate is the dependent variable.
 
-Read more from my notebook on hypothesis testing [here](../notebooks/hyp_testing_1.html).
+Read more from my notebook on hypothesis testing [here](../notebooks/hyp_testing_2.html).
 
 ## Applications
 A/B Testing is used very commonly in the development and refinement of many business products and services. For example, a webpage design, or the design of an application. Businesses need a measurable, verifiable, scientifically-sound way to test what will drive the best results and user feedback.
