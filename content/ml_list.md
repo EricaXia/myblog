@@ -27,7 +27,7 @@ Master list of machine learning algorithms I contribute pages about.
 
 - Naive Bayes
 
-- Support Vector Machines
+- [Support Vector Machines](/notebooks/svm_1.html)
 
 
 ![]()
@@ -50,7 +50,7 @@ Master list of machine learning algorithms I contribute pages about.
 - Feature engineering (selection, extraction, creation)
 - Principal Component Analysis (PCA)
 - Cross-validation (k-fold)
-- A/B testing
+- [A/B testing](/post/ab_testing)
 
 
 ### Statistics
