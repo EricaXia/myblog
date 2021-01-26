@@ -8,7 +8,7 @@ title = "Archetypal Analysis"
 
 AA is a type of **unsupervised clustering learning method** to find groups, or segments, of data. It is "unsupervised" in the sense that this process defines groups without knowing ahead of time what they will look like. The machine identifies them without being trained by labeled instances.
 
-Compared to another unsupervised method such as k-means, AA finds extreme points on the boundaries of the data set. This works well for an example use case such as *customer segmentation*, which would be served better by identifying unique groups with distinguishable characteristics, rather than multiple groups that seem similar to each other.
+Compared to another unsupervised method such as k-means, AA finds extreme points on the boundaries of the data set. This works well for an example use case such as [customer segmentation](https://en.wikipedia.org/wiki/Market_segmentation), which would be served better by identifying unique groups with distinguishable characteristics, rather than multiple groups that seem similar to each other.
 
 Archetypal analysis works by representing the data observations as *convex combinations* of extreme points, which represent our *archetypes*. How the algorithm finds these points is via estimation of the *Principal [Convex Hull](https://en.wikipedia.org/wiki/Convex_hull) (PCH)*, which is basically the border enclosing all the points. You can picture it as a rubber band stretching over the furthest-out "corners" of the data.
 
