@@ -22,12 +22,11 @@ Master list of machine learning algorithms I contribute pages about.
 
 - [k-Nearest-Neighbors (kNN)](/knn)
 
-- Decision Trees
-	- Random Forest  <!-- ExtraTreesClassifier -->
+- [Decision Trees and Random Forest](https://ericaxia.github.io/notebooks/random_forests_1.html)
 
 - Naive Bayes
 
-- [Support Vector Machines](/notebooks/svm_1.html)
+- [Support Vector Machines](https://ericaxia.github.io/notebooks/svm_1.html)
 
 
 ![]()
@@ -49,13 +48,13 @@ Master list of machine learning algorithms I contribute pages about.
 
 - Feature engineering (selection, extraction, creation)
 - Principal Component Analysis (PCA)
-- Cross-validation (k-fold)
+- k-Fold Cross-validation
 - [A/B testing](/post/ab_testing)
 
 
 ### Statistics
 - [PR, ROC curve](/stats_1)
-- [Hypothesis testing](/notebooks/hyp_testing_1.html)
+- [Hypothesis testing](https://ericaxia.github.io/notebooks/hyp_testing_1.html)
 
 ![]()
 
@@ -68,6 +67,9 @@ Master list of machine learning algorithms I contribute pages about.
 - Latent Dirichlet allocation (LDA)
 
 ### Deep Learning
+- Neural Networks (intro)
+- FeedForward
+- Perceptron
 - RNN
 - LSTM
 
