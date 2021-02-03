@@ -1,12 +1,8 @@
 +++
 title = "Machine Learning Algorithms: Master List"
 tags = ['Machine Learning']
-date = "2021-01-16"
+date = "2021-02-03"
 +++
-
-
-Master list of machine learning algorithms I contribute pages about.
-
 
 ---
 
@@ -14,13 +10,16 @@ Master list of machine learning algorithms I contribute pages about.
 
 *Supervised algorithms require labeled training data to train a prediction model and check results.*
 
-- [Regression](/regression-overview)
-	- Linear
-	- Logistic
+- Linear Regression ([write-up](/regression-overview) | [notebook](/))
+	- Stepwise
 	- Lasso
 	- Ridge
+	- ElasticNet
+	- MARS
 
-- [k-Nearest-Neighbors (kNN)](/knn)
+- Logistic Regression
+
+- [k-Nearest-Neighbors](/knn)
 
 - [Decision Trees and Random Forest](https://ericaxia.github.io/notebooks/random_forests_1.html)
 
@@ -44,7 +43,7 @@ Master list of machine learning algorithms I contribute pages about.
 
 ---
 
-### Other Related Topics
+### Related Topics
 
 - Feature engineering (selection, extraction, creation)
 - Principal Component Analysis (PCA)
@@ -53,13 +52,16 @@ Master list of machine learning algorithms I contribute pages about.
 
 
 ### Statistics
+- Descriptive Statistics for ML
 - [PR, ROC curve](/stats_1)
 - [Hypothesis testing](https://ericaxia.github.io/notebooks/hyp_testing_1.html)
+- Causal Inference
+	- RCTs
+	- Propensity Score Matching
+- Bayesian Inference
 
 ![]()
 
-
-\* more advanced *
 
 ---
 
