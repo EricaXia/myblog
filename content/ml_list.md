@@ -52,6 +52,7 @@ date = "2021-02-03"
 
 
 ### Statistics
+- [Probability](/probability_1)
 - Descriptive Statistics for ML
 - [PR, ROC curve](/stats_1)
 - [Hypothesis testing](https://ericaxia.github.io/notebooks/hyp_testing_1.html)
