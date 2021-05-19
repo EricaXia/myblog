@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning Algorithms: Master List"
 tags = ['Machine Learning']
-date = "2021-02-03"
+date = "2021-05-19"
 +++
 
 ---
@@ -63,6 +63,7 @@ date = "2021-02-03"
 - [PR, ROC curve](/stats_1)
 - [Hypothesis testing](https://ericaxia.github.io/notebooks/hyp_testing_1.html)
 - Causal Inference
+	- Causation != Correlation
 	- Randomized Control Trials (RCTs)
 	- Experimental Design
 	- Propensity Score Matching
@@ -74,14 +75,18 @@ date = "2021-02-03"
 
 ---
 
-### NLP
-- Latent Dirichlet allocation (LDA)
-
 ### Deep Learning
 - Neural Networks (intro)
 - FeedForward
 - Perceptron
+- Representation Learning
+	- Autoencoders
 - CNNs
 - RNNs
 - LSTM
+
+
+### NLP
+- Word Embeddings
+- Latent Dirichlet allocation (LDA)
 
