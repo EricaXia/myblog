@@ -602,14 +602,18 @@ Copyright (c) 2014 Daniel Eden
 
 /*Custom Code here*/
 
-img[src$='#center']
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+
+
+/*img[src$='#center']
 {
     display: block;
-    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
-                            whatever floats your boat, but keep the
-                            horizontal 'auto' for this to work */
-    /* whatever else styles you fancy here */
-}
+    margin: 0.7rem auto;
+}*/
+
 
 img[src$='#floatleft']
 {

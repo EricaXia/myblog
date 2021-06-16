@@ -1,14 +1,14 @@
 +++
 title = "About Me"
-date = "2021-01-18"
+date = "2021-06-15"
 hideDate = true
 +++
 
 Aspiring data scientist. Writer. Musician. Runner. Animal Lover. 
 
 ![]()
-
-![](/images/profile_pic_20201229.jpeg)
+![](/images/photo_Erica_Xia.png)
+![]()
 
 What inspires me about data science is...
 * The possibilities and discoveries to be made. I enjoy "connecting the dots" from the data, and discovering patterns and trends.
